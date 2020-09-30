@@ -1,3 +1,20 @@
+<script>
+!(function (s) {
+  s(function () {
+    function a(s) {
+      s.appendTo(s.parents("svg>g"));
+    }
+    s(".com-item").click(function () {
+      s(this).siblings().removeClass("active"),
+        s(this).addClass("active"),
+        s(".class-select").val(s(this).attr("id")).trigger("change"),
+        a(s(this));
+    });
+  });
+})(jQuery);
+
+</script>
+
 <div class="map-wrap">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812.06 615.28" class="a">
         <g id="map">
